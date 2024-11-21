@@ -39,8 +39,6 @@ public class WeaponPickup : MonoBehaviour
             // Aktifkan visual dari weapon
             TurnVisual(true);
 
-            // Hancurkan objek WeaponPickup setelah diambil oleh player
-            Destroy(gameObject);
         }
         else 
         {
