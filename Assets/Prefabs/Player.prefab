@@ -95,10 +95,6 @@ GameObject:
   - component: {fileID: 8510425942336817012}
   - component: {fileID: 2364795351117962853}
   - component: {fileID: 1985589253774681093}
-  - component: {fileID: 6227955709267778214}
-  - component: {fileID: 429755919831429772}
-  - component: {fileID: 1508361378713181118}
-  - component: {fileID: 3605442236610395247}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -195,62 +191,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.406487, y: 0.32220113}
   m_EdgeRadius: 0
---- !u!114 &6227955709267778214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029468520481187703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f728e9fd88f03cb44aed54b4d019687a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &429755919831429772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029468520481187703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f67b36a9519e7b44ac33718efcb79de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: {x: 7, y: 5}
-  timeToFullSpeed: {x: 1, y: 1}
-  timeToStop: {x: 0.5, y: 0.5}
-  stopClamp: {x: 2.5, y: 2.5}
-  offset: {x: 0.25, y: 0.5}
-  mainCamera: {fileID: 0}
---- !u!114 &1508361378713181118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029468520481187703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87d4f1cdc31ca5143983b9dae297c0dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 0
---- !u!114 &3605442236610395247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029468520481187703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e678f4b976d5424289bed97c2cfac62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 0}
 --- !u!1 &3433865108291558653
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +286,7 @@ Animator:
   m_GameObject: {fileID: 3433865108291558653}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 052c6635d2c3da54fa79ed9720a147ca, type: 2}
+  m_Controller: {fileID: 9100000, guid: 75d13ac081509394d8c7277503aab5a7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

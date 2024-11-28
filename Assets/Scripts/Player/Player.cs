@@ -1,44 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // This for getting the instace of Player Singleton
     public static Player Instance { get; private set; }
 
-    public PlayerMovement playerMovement;
-    public Animator animator;
+    // Getting the PlayerMovement methods
+    PlayerMovement playerMovement;
+    // Animator
+    Animator animator;
 
-    private void Awake()
+
+    // Key for Singleton
+    void Awake()
     {
-        // Pola Singleton untuk memastikan hanya ada satu instance dari Player
-        if (Instance != null && Instance != this) 
-        { 
-            Destroy(this); 
-        } 
-        else 
-        { 
-            Instance = this; 
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+            return;
         }
+
+        Instance = this;
+
+        DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    // Getting Component
+    void Start()
     {
-        // Mendapatkan komponen PlayerMovement yang terpasang pada GameObject Player
+        // Get PlayerMovement components
         playerMovement = GetComponent<PlayerMovement>();
-        // Mendapatkan komponen Animator dari GameObject anak
-        animator = GetComponentInChildren<Animator>();
+
+        // Get Animator components
+        animator = GameObject.Find("EngineEffects").GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+    // Using FixedUpdate to Move because of physics
+    void FixedUpdate()
     {
-        // Memanggil fungsi Move dari PlayerMovement untuk menggerakkan pemain
         playerMovement.Move();
     }
 
-    private void LateUpdate()
+    // LateUpdate for animation related
+    void LateUpdate()
     {
-        // Mengatur parameter IsMoving pada animator berdasarkan apakah pemain sedang bergerak
+        playerMovement.MoveBound();
         animator.SetBool("IsMoving", playerMovement.IsMoving());
     }
 }
